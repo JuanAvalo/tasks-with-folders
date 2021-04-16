@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+
+  # DATABASE
+  db:
+    image: mysql:5.7.33
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    container_name: mysql
+    environment:
+      - "MYSQL_ROOT_PASSWORD=sDiM+OL2D6QXek"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./mysql-data:/var/lib/mysql:rw
+
+  # BACKEND
+  backend:
+    image: docker.pkg.github.com/juanavalo/tasks-with-folders/backend:latest
+    ports:
+      - '3001:3001'
+    command: npm run start
+    restart: always
+    depends_on:
+      - db
+
+  # FRONTEND
+  frontend:
+    image: docker.pkg.github.com/juanavalo/tasks-with-folders/frontend:latest
+    restart: always
+    ports:
+      - '8080:80'
+    depends_on: 
+      - backend

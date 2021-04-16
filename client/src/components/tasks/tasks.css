@@ -1,0 +1,14 @@
+.task_menu_button {
+    position:relative;
+    float:right;
+    
+}
+
+.inner {
+    display: inline-block;
+}
+
+#outer{
+    width: 80%;
+}
+

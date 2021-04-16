@@ -1,0 +1,10 @@
+.dockerignore
+.gitignore
+.vscode
+Dockerfile
+LICENSE
+node_modules
+README.md
+yarn-error.log
+yarn.lock
+package-lock.json
