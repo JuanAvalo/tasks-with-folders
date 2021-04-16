@@ -34,11 +34,11 @@ fi
 
 # inject our .sql file to create/populate everything into the container db
 echo "Initializing our database..."
-docker exec -i mysql mysql -u root -p'sDiM+OLDQXek' < ./db/scripts/create_db.sql
+docker exec -i mysql mysql -u root --password='sDiM+OL2D6QXek' < ./db/scripts/create_db.sql
 
 if [[ $? -eq 0 ]] ; then
     echo "# ...And our App is running :-D"
-    echo -e "\n\tTest it by visiting http://___:8080\n"
+    echo -e "\n\tTest it by visiting http://104.236.15.234/:8080\n"
 else
     echo "Something failed... :-("
 fi

@@ -9,7 +9,7 @@ services:
     restart: always
     container_name: mysql
     environment:
-      - "MYSQL_ROOT_PASSWORD=sDiM+OL2D6QXek"
+      - MYSQL_ROOT_PASSWORD=sDiM+OL2D6QXek
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ./mysql-data:/var/lib/mysql:rw
