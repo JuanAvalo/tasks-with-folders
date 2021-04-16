@@ -2,8 +2,8 @@ Technical challenge for Ensolvers
 
 # Requirements :wrench:
 
-* docker installed & docker daemon running
-* docker-compose installed in the system
+* Docker v20.10 installed & docker daemon running
+* docker-compose v1.28 installed in the system
 
 # Deploy
 
