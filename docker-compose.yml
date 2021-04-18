@@ -16,7 +16,7 @@ services:
 
   # BACKEND
   backend:
-    image: docker.pkg.github.com/juanavalo/tasks-with-folders/backend:latest
+    image: juanavalo/tasksbackend:1.0
     ports:
       - '3001:3001'
     command: npm run start
@@ -26,7 +26,7 @@ services:
 
   # FRONTEND
   frontend:
-    image: docker.pkg.github.com/juanavalo/tasks-with-folders/frontend:latest
+    image: juanavalo/localfront:1.0
     restart: always
     ports:
       - '8080:80'
